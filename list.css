@@ -1,0 +1,96 @@
+
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.col {
+	flex: 2;
+}
+
+@media (max-width: 400px) {
+	.flex-grid {
+		display:block;
+	}
+}
+
+#header{
+	font-size: 60px;
+	background-color: #66ffff;
+	text-align: center;
+
+
+}
+
+/*adding style to list items*/
+.item {
+	border: 1px solid black;
+	box-shadow: 5px 10px #66ffff;
+	font-size: 27px;
+	padding-top: 10px;
+	margin-top: 10px;
+	width: 200px;
+	border-radius: 10px;
+	list-style: none;
+	padding-left: 10px;
+}
+
+.item:hover{
+	transform: scale(1.1);
+}
+
+/*adding delete button*/
+
+
+
+
+/*button style*/
+#button {
+	margin-top: 20px;
+	background-color: #66ffff; 
+	font-size: 22px;
+
+
+}
+
+#button:hover{
+	background-color: white;
+}
+
+/*style to searchbox*/
+#adding {
+	height: 30px;
+	width: 200px;
+}
+
+/*saying you are done with an item*/
+.strike{
+	border: 1px solid black;
+	box-shadow: 5px 10px #66ffff;
+	font-size: 27px;
+	padding-top: 10px;
+	margin-top: 10px;
+	width: 200px;
+	border-radius: 10px;
+	text-decoration: line-through;
+	list-style: none;
+}
+
+.delete {
+   margin-bottom: 10px;
+   background-color: #66ffff; 
+   margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+
+
