@@ -4,8 +4,36 @@ var button = document.getElementById("button");
 var search = document.getElementById("adding");
 var ul = document.getElementById("items");
 var items = document.getElementsByTagName("li");
+var trash = document.getElementById("delete");
 
 
+
+// function garbage () {
+// 	var trashcan = ul.getElementsByTagName("li");
+//     trashcan.removeChild(trashcan);
+// 	// trashcan.removeChild(trashcan.childNodes[i]);
+// // }
+
+	// var ul = document.getElementById("items");
+	// ul.removeChild(ul.childNodes[i]);
+
+
+// function garbage () {
+
+// 	ul.removeChild(e.target.parentElement);
+	
+// }
+
+//deleting the first item on the list
+function garbage () {
+
+	
+	var ul = document.getElementById("items");
+	ul.removeChild(ul.firstChild);
+}
+
+
+trash.addEventListener("click", garbage);
 
 
 	
@@ -56,6 +84,14 @@ const add = () => {
 		
 	if(inputlength() > 0 ) {
 	createListElement();
+	for(var i = 0; i < items.length; i++){
+
+		items[i].addEventListener("click", strikethrough);
+	}
+		
+function strikethrough () {
+	this.classList.toggle("strike");
+}
 	}
 	
 }
@@ -65,6 +101,14 @@ const addEnter = () => {
 
 	if(inputlength() > 0 && event.keyCode === 13) {
 	createListElement(); 
+	for(var i = 0; i < items.length; i++){
+
+		items[i].addEventListener("click", strikethrough);
+	}
+		
+function strikethrough () {
+	this.classList.toggle("strike");
+}
 	}
 	
 }

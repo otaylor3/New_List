@@ -82,19 +82,29 @@
 	list-style: none;
 }
 
-.delete {
-   width: 200px;
+#delete {
+   width: 60px;
    background-color: #66ffff; 
    margin-left: 40px;
    border-radius: 20px;
    
+
+   
 }
 
-.delete:hover{
+#delete:hover{
 	transform: scale(1.1);
 	background-color: white;
 }
 
+.trashy{
+	justify-content: center;
+	align-items: center;
+}
+
+#instructions{
+	text-align: center;
+}
 
 
 
