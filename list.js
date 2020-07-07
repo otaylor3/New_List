@@ -29,7 +29,7 @@ function garbage () {
 
 	
 	var ul = document.getElementById("items");
-	ul.removeChild(ul.firstChild);
+	ul.removeChild(ul.lastChild);
 }
 
 
@@ -63,17 +63,23 @@ for(var i = 0; i < items.length; i++){
 	}
 		
 function strikethrough () {
+
 	this.classList.toggle("strike");
 }
 	
-//create list element
+//create list element & add strikethrough 
 const createListElement = () => {
+
 	var look = search.value;
 	var list = document.createElement("li");
 	list.appendChild(document.createTextNode(look));
 	list.setAttribute("class", "item");
-	ul.appendChild(list)
+	ul.appendChild(list);
 	search.value = "" ; 
+	for(var i = 0; i < items.length; i++){
+
+		items[i].addEventListener("click", strikethrough);
+	}
 }
 
 
@@ -81,17 +87,10 @@ const createListElement = () => {
 
 //create an element with button
 const add = () => {
-		
+	
 	if(inputlength() > 0 ) {
 	createListElement();
-	for(var i = 0; i < items.length; i++){
 
-		items[i].addEventListener("click", strikethrough);
-	}
-		
-function strikethrough () {
-	this.classList.toggle("strike");
-}
 	}
 	
 }
@@ -101,14 +100,7 @@ const addEnter = () => {
 
 	if(inputlength() > 0 && event.keyCode === 13) {
 	createListElement(); 
-	for(var i = 0; i < items.length; i++){
 
-		items[i].addEventListener("click", strikethrough);
-	}
-		
-function strikethrough () {
-	this.classList.toggle("strike");
-}
 	}
 	
 }
