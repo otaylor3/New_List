@@ -3,64 +3,68 @@
 var button = document.getElementById("button");
 var search = document.getElementById("adding");
 var ul = document.getElementById("items");
-var li = document.getElementsByTagName("li");
+var items = document.getElementsByTagName("li");
 
+
+
+
+	
+
+
+// for( var i = 0; i < items.length; i++ ){
+// 	items[i].addEventListener("click", strikethrough, false);
+	
+// }	
+
+
+
+
+
+
+//input length
+const inputlength = () => {
+	return search.value.length;
+}
 
 //strikethrough 
 
-	
-	// var li = document.getElementsByTagName("li")[i].addEventListener("click",const striker = () => {
-	// 	var = i ; 
-	// for(var i = 0; i < li.length; i++  ) {
-	// 	var trash = document.getelementsByClassName("delete")[i]
-	// 	.classList.toggle("strike");
-	// }
 
-	// )
-	
+for(var i = 0; i < items.length; i++){
 
+		items[i].addEventListener("click", strikethrough);
+	}
+		
+function strikethrough () {
+	this.classList.toggle("strike");
+}
+	
+//create list element
+const createListElement = () => {
+	var look = search.value;
+	var list = document.createElement("li");
+	list.appendChild(document.createTextNode(look));
+	list.setAttribute("class", "item");
+	ul.appendChild(list)
+	search.value = "" ; 
+}
 
 
 
 
 //create an element with button
 const add = () => {
-	
-	// var li = document.getElementsByTagName("li");
-	var look = search.value;
-	var found = look.length;
-
-
-	if(found>0) {
-	var list = document.createElement("li");
-	list.appendChild(document.createTextNode(look));
-	list.setAttribute("class", "item");
-	ul.appendChild(list)
-
-	
-
-
-	search.value = "" ; 
+		
+	if(inputlength() > 0 ) {
+	createListElement();
 	}
 	
 }
 
 //create an element with enter key
 const addEnter = () => {
-	
-	// var li = document.getElementsByTagName("li");
-	var look = search.value;
-	var found = look.length;
 
-	if(found>0 && event.keyCode === 13) {
-	var list = document.createElement("li");
-	list.appendChild(document.createTextNode(look));
-	list.setAttribute("class", "item");
-	ul.appendChild(list)
-
-
-
-	search.value = "" ; 
+	if(inputlength() > 0 && event.keyCode === 13) {
+	createListElement(); 
 	}
 	
 }
@@ -68,7 +72,6 @@ const addEnter = () => {
 
 
 //remove the element with delete
-
 
 
 

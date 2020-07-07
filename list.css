@@ -5,6 +5,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 80%;
+	height: 70%;
 }
 
 .col {
@@ -18,12 +20,11 @@
 }
 
 #header{
-	font-size: 60px;
-	background-color: #66ffff;
+	font-size: 100px;
 	text-align: center;
-
-
+	background-color: #66ffff;
 }
+
 
 /*adding style to list items*/
 .item {
@@ -36,6 +37,7 @@
 	border-radius: 10px;
 	list-style: none;
 	padding-left: 10px;
+
 }
 
 .item:hover{
@@ -52,6 +54,7 @@
 	margin-top: 20px;
 	background-color: #66ffff; 
 	font-size: 22px;
+
 
 
 }
@@ -80,11 +83,17 @@
 }
 
 .delete {
-   margin-bottom: 10px;
+   width: 200px;
    background-color: #66ffff; 
    margin-left: 40px;
+   border-radius: 20px;
+   
 }
 
+.delete:hover{
+	transform: scale(1.1);
+	background-color: white;
+}
 
 
 
