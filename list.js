@@ -1,5 +1,4 @@
-// var ul = document.getElementById("items");
-// var items = ul.getElementsByTagName("li");
+
 var button = document.getElementById("button");
 var search = document.getElementById("adding");
 var ul = document.getElementById("items");
@@ -8,21 +7,6 @@ var trash = document.getElementById("delete");
 
 
 
-// function garbage () {
-// 	var trashcan = ul.getElementsByTagName("li");
-//     trashcan.removeChild(trashcan);
-// 	// trashcan.removeChild(trashcan.childNodes[i]);
-// // }
-
-	// var ul = document.getElementById("items");
-	// ul.removeChild(ul.childNodes[i]);
-
-
-// function garbage () {
-
-// 	ul.removeChild(e.target.parentElement);
-	
-// }
 
 //deleting the first item on the list
 function garbage () {
@@ -36,17 +20,6 @@ function garbage () {
 trash.addEventListener("click", garbage);
 
 
-	
-
-
-// for( var i = 0; i < items.length; i++ ){
-// 	items[i].addEventListener("click", strikethrough, false);
-	
-// }	
-
-
-
-
 
 
 //input length
@@ -54,8 +27,9 @@ const inputlength = () => {
 	return search.value.length;
 }
 
-//strikethrough 
 
+
+//strikethrough 
 
 for(var i = 0; i < items.length; i++){
 
@@ -67,6 +41,9 @@ function strikethrough () {
 	this.classList.toggle("strike");
 }
 	
+
+
+
 //create list element & add strikethrough 
 const createListElement = () => {
 
@@ -85,6 +62,7 @@ const createListElement = () => {
 
 
 
+
 //create an element with button
 const add = () => {
 	
@@ -94,6 +72,8 @@ const add = () => {
 	}
 	
 }
+
+
 
 //create an element with enter key
 const addEnter = () => {
@@ -108,9 +88,6 @@ const addEnter = () => {
 
 
 //remove the element with delete
-
-
-
 
 
 

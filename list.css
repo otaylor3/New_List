@@ -107,7 +107,17 @@
 }
 
 
+.reload{
+   width: 60px;
+   background-color: #66ffff; 
+   margin-left: 40px;
+   border-radius: 20px;
+}
 
+.reload:hover{
+  transform: scale(1.1);
+	background-color: white;
+}
 
 
 
