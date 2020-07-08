@@ -47,6 +47,8 @@ const createListElement = () => {
 	var btn = document.createElement("button");
 	btn.className = "delete";
 	btn.innerHTML = "delete";
+
+	
 	btn.addEventListener("click", function(e){
 		e.target.parentNode.remove();
 	});
