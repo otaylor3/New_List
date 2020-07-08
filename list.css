@@ -82,7 +82,7 @@
 	list-style: none;
 }
 
-#delete {
+.delete {
    width: 60px;
    background-color: #66ffff; 
    margin-left: 40px;
@@ -92,7 +92,7 @@
    
 }
 
-#delete:hover{
+.delete:hover{
 	transform: scale(1.1);
 	background-color: white;
 }

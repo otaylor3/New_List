@@ -3,22 +3,17 @@ var button = document.getElementById("button");
 var search = document.getElementById("adding");
 var ul = document.getElementById("items");
 var items = document.getElementsByTagName("li");
-var trash = document.getElementById("delete");
+var trash = document.getElementsByClassName("delete");
 
 
 
 
 //deleting the first item on the list
-function garbage () {
-
-	
-	var ul = document.getElementById("items");
-	ul.removeChild(ul.lastChild);
-}
-
-
-trash.addEventListener("click", garbage);
-
+Array.prototype.slice.call(trash).forEach(function(item){
+	item.addEventListener("click", function (e) {
+		e.target.parentNode.remove()
+	});
+})
 
 
 
@@ -49,14 +44,20 @@ const createListElement = () => {
 
 	var look = search.value;
 	var list = document.createElement("li");
+	var btn = document.createElement("button");
+	btn.className = "delete";
+	btn.innerHTML = "delete";
+	btn.addEventListener("click", function(e){
+		e.target.parentNode.remove();
+	});
 	list.appendChild(document.createTextNode(look));
+	list.addEventListener("click", strikethrough);
+	list.innerHTML = look + " " ;
+	list.appendChild(btn);
 	list.setAttribute("class", "item");
 	ul.appendChild(list);
 	search.value = "" ; 
-	for(var i = 0; i < items.length; i++){
-
-		items[i].addEventListener("click", strikethrough);
-	}
+	
 }
 
 
